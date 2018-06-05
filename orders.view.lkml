@@ -41,4 +41,8 @@ view: orders {
       value: "Organic"
     }
   }
+  measure: percent_organic_users {
+    type: number
+    sql: ${count_organic_users}/${count} ;;
+  }
 }
