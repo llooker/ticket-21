@@ -28,10 +28,10 @@ view: orders {
     sql: ${TABLE}.user_id ;;
   }
 
-#   measure: count {
-#     type: count
-#     drill_fields: [id, users.id, users.first_name, users.last_name, order_items.count]
-#   }
+  measure: count {
+    type: count
+    drill_fields: [id, users.id, users.first_name, users.last_name, order_items.count]
+  }
   measure: count_organic_users {
     type: count_distinct
     sql:  ${user_id} ;;
@@ -41,8 +41,8 @@ view: orders {
       value: "Organic"
     }
   }
-#   measure: percent_organic_users {
-#     type: number
-#     sql: ${count_organic_users}/${count} ;;
-#   }
+  measure: percent_organic_users {
+    type: number
+    sql: ${count_organic_users}/${count} ;;
+  }
 }
