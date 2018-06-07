@@ -62,8 +62,8 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
-#   measure: count {
-#     type: count
-#     drill_fields: [id, first_name, last_name, orders.count]
-#   }
+  measure: count {
+    type: count
+    drill_fields: [id, first_name, last_name, orders.count]
+  }
 }
